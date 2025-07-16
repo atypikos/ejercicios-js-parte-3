@@ -18,7 +18,22 @@ let resultadoResta = restar(3,10);
     console.log(resultadoResta);
 
 // 3. Escribe una función que tome dos números como argumentos y devuelva su producto.
+
+function multiplicar (a,b) {
+    return a * b;
+}
+
+let resultadoMultiplicar = multiplicar(3,3);
+    console.log(resultadoMultiplicar);
+
 // 4. Escribe una función que tome dos números como argumentos y devuelva su división.
+function division (a,b) {
+    return a / b;
+}
+
+let resultadoDivision = division(3,3);
+    console.log(resultadoDivision);
+
 // 5. Escribe una función que tome un número base y un exponente y devuelva el resultado de elevar el número base a la potencia dada.
 // 6. Escribe una función que tome dos números como argumentos y devuelva el resto de la división del primer número entre el segundo.
 // 7. Escribe una función que tome un número como argumento y devuelva su raíz cuadrada.
