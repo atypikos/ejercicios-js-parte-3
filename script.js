@@ -89,12 +89,103 @@ let resultadoRandom = random();
     console.log(resultadoRandom);
 
 // 1. Escribe una función que tome dos cadenas de texto como argumentos y devuelva su concatenación.
+
+let concatenar = function (texto1, texto2) {
+    return texto1 + texto2;
+}
+
+let resultadoConcatenar = concatenar ("hola mundo", " estoy bien")
+console.log(resultadoConcatenar);
+
+
 // 2. Escribe una función que tome una cadena de texto como argumento y devuelva su longitud.
+
+let cadena = function (textoCadena) {
+    return textoCadena.length;
+}
+
+let textoCadena = "esto es una prueba";
+console.log(cadena(textoCadena));
+
 // 3. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena en mayúsculas.
+
+let cadenaCaps = function(caps) {
+    return caps.toUpperCase();
+
+}
+
+let caps = "this text is gonna be capsed";
+
+console.log(cadenaCaps(caps));
+
 // 4. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena en minúsculas.
+
+let lowerCase = function(lower) {
+    return lower.toLowerCase();
+}
+
+let lower = "THIS iS a F meSS";
+console.log(lowerCase(lower));
+
 // 5. Escribe una función que tome una cadena de texto y un índice como argumentos, y devuelva el carácter en esa posición.
+
+let posicion = function (texto1, i) {
+    return texto1[i];
+}
+
+let textoPosicion = posicion("Este es el texto", 3);
+console.log(textoPosicion);
+
+
 // 6. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena invertida.
+
+let invertido = function (cadena) {
+    return cadena.split("").reverse().join("");
+}
+
+let cadenaFinal = "CaleroIndaHouse";
+console.log(invertido(cadenaFinal));
+
 // 7. Escribe una función que tome una cadena de texto y un carácter como argumentos, y devuelva la cantidad de veces que el carácter aparece en la cadena.
+
+let caracter = function (texto1, char) {
+    let contador = 0;
+    for (let i = 0; i < texto1.length; i++) {
+        if (texto1[i] === char) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+let frase = "hey que tal";
+let encontrar = "e";
+const MATCH = caracter(frase,encontrar);
+console.log(MATCH);
+
 // 8. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena sin espacios en blanco.
+
+let espacios = function (textoTest) {
+    return textoTest.replace(/\s/g, "");
+}
+
+let frase2 = "dios, me voy a quedar sin ningún espacio en esta frase";
+console.log(espacios(frase2));
+
+
 // 9. Escribe una función que tome una cadena de texto como argumento y devuelva true si es un palíndromo (se lee igual de izquierda a derecha y de derecha a izquierda), o false si no lo es.
+
+let palindromo = function (palabra) {
+    let invertida = palabra.split("").reverse().join("");
+    if (palabra === invertida) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let testeoPal = "hola";
+
+console.log(palindromo(testeoPal));
 // 10. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena con la primera letra de cada palabra en mayúscula.    
+
