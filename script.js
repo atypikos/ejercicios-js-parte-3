@@ -212,7 +212,27 @@ function array1(numeros) {
 console.log(array1([1, 3, 5, 6, 10]));
 
 // 2. Escribe una función que tome un array de números como argumento y devuelva el promedio de todos sus elementos.
+
+function array2(promedio) {
+    let div = 0;
+
+    for (let i = 0; i < promedio.length ; i++) {
+    
+        div = div + promedio[i] / promedio.length;
+    }
+
+    return div;
+}
+
+console.log(array2([3, 5, 2,]));
+
 // 3. Escribe una función que tome un array de números como argumento y devuelva el array ordenado de forma ascendente.
+
+function array3(ascendance) {
+
+    
+
+}
 // 4. Escribe una función que tome un array de números y un número como argumentos, y devuelva un nuevo array con los elementos mayores al número dado.
 // 5. Escribe una función que tome dos arrays como argumentos y devuelva un nuevo array con todos los elementos de ambos arrays.
 // 6. Escribe una función que tome un array de números como argumento y devuelva el número máximo dentro del array.
