@@ -189,16 +189,28 @@ let testeoPal = "hola";
 console.log(palindromo(testeoPal));
 // 10. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena con la primera letra de cada palabra en mayúscula.    
 
-function cadena(texto) {
+function cadena3(texto) {
         return texto
         .split(' ') //split(' ') divide el texto en un array de palabras.
         .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1)) //map(...) recorre cada palabra.
         .join(' '); //join(' ') vuelve a unir las palabras con espacios.
 }
 
-console.log(cadena("por ejemplo quiero estas en mayúsculas"));
+console.log(cadena3("por ejemplo quiero estas en mayúsculas"));
 
 // 1. Escribe una función que tome un array de números como argumento y devuelva la suma de todos sus elementos.
+
+function array1(numeros) {
+    let suma = 0 
+    for (let i = 0; i < numeros.length ; i++) {
+
+    suma = suma + numeros[i];
+    }
+    return suma;
+}
+
+console.log(array1([1, 3, 5, 6, 10]));
+
 // 2. Escribe una función que tome un array de números como argumento y devuelva el promedio de todos sus elementos.
 // 3. Escribe una función que tome un array de números como argumento y devuelva el array ordenado de forma ascendente.
 // 4. Escribe una función que tome un array de números y un número como argumentos, y devuelva un nuevo array con los elementos mayores al número dado.
