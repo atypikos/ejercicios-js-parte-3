@@ -294,4 +294,11 @@ console.log(array8([1, 5, 3, 2, 4, 2], 2));
 
 
 // 9. Escribe una función que tome un array como argumento y devuelva un nuevo array sin elementos duplicados.
+
+function array9(sinDuplicar) {
+    return [...new Set(sinDuplicar)];
+}
+
+console.log(array9([1, 2, 3, 2, 4, 1]));
+
 // 10. Escribe una función que tome un array como argumento y devuelva un nuevo array con los elementos en orden inverso.
