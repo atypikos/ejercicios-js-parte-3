@@ -230,13 +230,68 @@ console.log(array2([3, 5, 2,]));
 
 function array3(ascendance) {
 
-    
+    return ascendance.sort((a, b) => a - b);
 
 }
+
+console.log(array3([1, 3, 5, 10, 2, 3, 4]));
+
 // 4. Escribe una función que tome un array de números y un número como argumentos, y devuelva un nuevo array con los elementos mayores al número dado.
+
+
+function array4(numeros, numero) {
+
+    return numeros.filter(elemento => elemento > numero);
+}
+
+let numeros = [3, 2, 10, 25, 32, 8];
+let resultado = array4(numeros,9);
+
+console.log(resultado);
+
 // 5. Escribe una función que tome dos arrays como argumentos y devuelva un nuevo array con todos los elementos de ambos arrays.
+
+function array5(array1, array2) {
+    return array1.concat(array2);
+}
+
+console.log(array5([1,2,3,5,6], [3,5,6,6,7]));
+
 // 6. Escribe una función que tome un array de números como argumento y devuelva el número máximo dentro del array.
+
+function array6(maximos) {
+    return Math.max(...maximos);
+}
+
+console.log(array6([1,3,29,3,5,4]));
+
 // 7. Escribe una función que tome un array de números como argumento y devuelva el número mínimo dentro del array.
+
+function array7(minimos) {
+    return Math.min(...minimos);
+}
+
+console.log(array7([1,9,229,30,2,4]));
+
 // 8. Escribe una función que tome un array y un elemento como argumentos, y devuelva la cantidad de veces que el elemento aparece en el array.
+
+function array8(numeros, elemento) {
+    let contador = 0; // empezamos en 0
+
+    // Recorremos el array desde el primer elemento hasta el último
+    for (let i = 0; i < numeros.length; i++) {
+        // Si el elemento actual del array es igual al elemento que buscamos...
+        if (numeros[i] === elemento) {
+            contador++; // ... sumamos 1 al contador
+        }
+    }
+
+    return contador; // devolvemos el total de veces que lo encontramos
+}
+
+// Ejemplo: contamos cuántas veces aparece el número 2
+console.log(array8([1, 5, 3, 2, 4, 2], 2)); 
+
+
 // 9. Escribe una función que tome un array como argumento y devuelva un nuevo array sin elementos duplicados.
 // 10. Escribe una función que tome un array como argumento y devuelva un nuevo array con los elementos en orden inverso.
