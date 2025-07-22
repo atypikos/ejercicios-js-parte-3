@@ -377,8 +377,88 @@ console.log(counter());
 
 // 6. Escribe una función que tome un objeto literal y una cadena de texto como argumentos, y devuelva true si el objeto tiene una propiedad con ese nombre, o false si no la tiene.
 
+let trueFalse = {
+
+    propiedad4: "hola",
+    propiedad5: "Como va"
+}
+
+function tienePropiedad(objeto, propiedad) {
+    if (objeto.hasOwnProperty(propiedad)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+console.log(tienePropiedad(trueFalse, "propiedad4"));
+console.log(tienePropiedad(trueFalse, "propiedad6"));
 
 // 7. Escribe una función que tome un objeto literal como argumento y devuelva un array con todos los valores de sus propiedades.
+
+let arrayDevuelve = {
+    propiedad7: "hey",
+    propiedad8: "hey2",
+    propiedad9: "hey3",
+    propiedad10: "hey4"
+};
+
+function array25(objeto) { //definimos una función llamada array25 queq recibe un objeto como argumento
+    return Object.values(objeto); //Es una función de JavaScript que te devuelve un array con todos los valores del objeto.
+}
+
+console.log(array25(arrayDevuelve));
+
 // 8. Escribe una función que tome dos objetos literales como argumentos y devuelva true si tienen las mismas propiedades y los mismos valores en esas propiedades, o false si son diferentes.
+
+let dosObjetos = {
+    propiedadV: "V",
+    propiedadB: "B"
+};
+
+let otrosObjetos = {
+    propiedadV: "V",
+    propiedadB: "B"
+};
+
+// Creamos la función
+function trueF(objeto1, objeto2) {
+    // 1. Guardamos las claves (propiedades) de cada objeto en arrays
+    let claves1 = Object.keys(objeto1);
+    let claves2 = Object.keys(objeto2);
+
+    // 2. Si tienen diferente número de propiedades, no pueden ser iguales
+    if (claves1.length !== claves2.length) {
+        return false;
+    }
+
+    // 3. Recorremos cada clave y comparamos los valores
+    for (let i = 0; i < claves1.length; i++) {
+        let clave = claves1[i]; // nombre de la propiedad (por ejemplo "propiedadV")
+
+        // 4. Si el valor de esa propiedad es distinto en los dos objetos, no son iguales
+        if (objeto1[clave] !== objeto2[clave]) {
+            return false;
+        }
+    }
+
+    // 5. Si todas las claves y valores coinciden, entonces son iguales
+    return true;
+}
+
+// Probar la función
+console.log(trueF(dosObjetos, otrosObjetos)); // → true
+
 // 9. Escribe una función que tome un objeto literal como argumento y devuelva una copia exacta de ese objeto.
+
+let copia = {
+    prop1: 30,
+    prop2: "Ser"
+}
+
+let copia1 = { ...copia };
+
+console.log(copia);
+
 // 10. Escribe una función que tome dos objetos literales como argumentos y devuelva un nuevo objeto con todas las propiedades de ambos objetos. Si hay propiedades con el mismo nombre, el valor del segundo objeto deberá prevalecer.
