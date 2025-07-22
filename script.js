@@ -321,11 +321,63 @@ console.log(namerino.nombre);
 
 // 2. Escribe una función que tome un objeto literal con una propiedad "edad" y un número como argumentos, y actualice el valor de la propiedad "edad" con el número dado.
 
+function actualizarEdad(objeto, nuevaEdad) {
+    objeto.edad = nuevaEdad;
+}
+
+let persona = {
+    edad: 32
+};
+
+actualizarEdad(persona, 40);
+
+console.log(persona.edad);
 
 // 3. Escribe una función que tome un objeto literal y una cadena de texto como argumentos, y agregue una nueva propiedad al objeto con la cadena de texto como nombre y un valor inicial de null.
+
+let cadenaTexto = {
+    texto: "varText",
+    varText: null
+
+};
+
 // 4. Escribe una función que tome un objeto literal y una cadena de texto como argumentos, y elimine la propiedad del objeto con el nombre dado.
+
+let cadenaTexto2 = {
+    texto: "varText",
+    hola: "hi",
+};
+
+console.log(cadenaTexto2);
+
+function eliminar(object,property){
+    delete object[property];
+}
+
+eliminar(cadenaTexto2, "texto");
+
+console.log(cadenaTexto2);
+
 // 5. Escribe una función que tome un objeto literal como argumento y devuelva la cantidad de propiedades que tiene.
+
+let devolver = {
+    propiedad1: "hola",
+    propiedad2: "hola2",
+    propiedad3: "hola3"
+}
+
+console.log(devolver);
+
+function counter() {
+    return Object.keys(devolver).length;
+
+}
+
+console.log(counter());
+
 // 6. Escribe una función que tome un objeto literal y una cadena de texto como argumentos, y devuelva true si el objeto tiene una propiedad con ese nombre, o false si no la tiene.
+
+
 // 7. Escribe una función que tome un objeto literal como argumento y devuelva un array con todos los valores de sus propiedades.
 // 8. Escribe una función que tome dos objetos literales como argumentos y devuelva true si tienen las mismas propiedades y los mismos valores en esas propiedades, o false si son diferentes.
 // 9. Escribe una función que tome un objeto literal como argumento y devuelva una copia exacta de ese objeto.
