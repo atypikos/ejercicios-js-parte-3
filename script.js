@@ -462,3 +462,19 @@ let copia1 = { ...copia };
 console.log(copia);
 
 // 10. Escribe una función que tome dos objetos literales como argumentos y devuelva un nuevo objeto con todas las propiedades de ambos objetos. Si hay propiedades con el mismo nombre, el valor del segundo objeto deberá prevalecer.
+
+let obj1 = {
+    prop3: 25,
+    prop4: "Tom"
+}
+
+let obj2 = {
+    prop3: 32,
+    prop6: "J"
+}
+
+function devolverTodo(a, b) {
+    return {...a, ...b};
+}
+
+console.log(devolverTodo(obj1,obj2));
